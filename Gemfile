@@ -9,7 +9,7 @@ gem 'pg'
 gem 'pry-rails'
 gem 'rspec-rails'
 gem 'carrierwave'
-gem 'dotenv-rails'
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rmagick'
 
 
