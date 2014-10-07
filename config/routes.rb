@@ -1,8 +1,13 @@
 FeyaCandle::Application.routes.draw do
-  resources :users
 
-
-  resources :locations
+  resources :locations, :users, :products
+  
+  get 'home' => 'pages#home', :as => 'home'
+  root :to => 'pages#home'
+  get 'about' => 'pages#about', :as => "about"
+  get 'volunteer' => 'pages#volunteer', :as => 'volunteer'
+  get 'stores' => 'pages#stores', :as => 'stores'
+  
 
 
   # The priority is based upon order of creation:
@@ -54,7 +59,7 @@ FeyaCandle::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  
 
   # See how all your routes lay out with "rake routes"
 
