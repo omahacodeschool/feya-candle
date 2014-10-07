@@ -1,18 +1,26 @@
 FeyaCandle::Application.routes.draw do
 
+  # get "user_sessions/new"
+  #
+  # get "user_sessions/create"
+  #
+  # get "user_sessions/destroy"
+
   get "password_resets/create"
-
   get "password_resets/edit"
-
   get "password_resets/update"
 
-  resources :locations, :users, :products, :password_resets
+  resources :locations, :users, :products, :password_resets, :user_sessions
   
   get 'home' => 'pages#home', :as => 'home'
   root :to => 'pages#home'
   get 'about' => 'pages#about', :as => "about"
   get 'volunteer' => 'pages#volunteer', :as => 'volunteer'
   get 'stores' => 'pages#stores', :as => 'stores'
+  
+  #Login routes
+  get 'login' => 'user_sessions#new', :as => "login"
+  post 'logout' => 'user_sessions#destroy', :as => "logout"
   
 
 
