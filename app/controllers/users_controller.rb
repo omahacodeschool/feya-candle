@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  
+  #TODO Delete this after development, so multiple users do not have access.
+  skip_before_filter :require_login, only: [:new, :create, :index]
   # GET /users
   # GET /users.json
   def index
