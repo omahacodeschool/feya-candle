@@ -16,3 +16,5 @@ Additional information:
 - http://www.nebraskaentrepreneurship.com/featured-content-gallery/lincoln-soy-candle-company-makes-giving-a-priority/
 
 Text for website: http://cl.ly/XteT/Text%20for%20website.docx
+
+Members: Andrea, Jen, Corey
