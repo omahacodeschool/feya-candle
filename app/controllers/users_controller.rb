@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   
   #TODO Delete this after development, so multiple users do not have access.
   skip_before_filter :require_login, only: [:new, :create, :index]
+  
   # GET /users
   # GET /users.json
   def index
@@ -47,7 +48,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
