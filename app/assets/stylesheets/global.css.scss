@@ -46,13 +46,19 @@ body {
 
 header {
   @extend .background;
-  @extend .heightplaceholder;
+  height: 300px;;
+}
+
+header img {
+  max-height:300px;
+  float:left;
 }
 
 nav {
   width: 100%;
   background-color: $greencolor;
   height: 50px;
+  @extend .cf
 }
 
 .navtab {
