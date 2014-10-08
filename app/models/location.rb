@@ -5,7 +5,11 @@ class Location < ActiveRecord::Base
   after_validation :geocode, :if => :address_changed?
   
   def full_street_address
-    address + ", " + city + ", " + state
+    if address?
+      address + ", " + city + ", " + state
+    else
+      city + ", " + state
+    end
   end
   
   def location
