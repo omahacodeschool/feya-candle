@@ -32,6 +32,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'sorcery'
 
+gem 'geocoder'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
