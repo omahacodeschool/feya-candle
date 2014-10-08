@@ -33,16 +33,21 @@ header {
 nav {
   width: 100%;
   background-color: $greencolor;
+  height: 50px;
+}
+
+
+.navtab {
+  width: 25%;
+  float: left;
 }
 
 .navlink {
-  width: 25%;
   text-color: $linkcolor;
-  align-text: center;
-  display: inline block;
-  padding: 10px;
+  align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
-
 
 #givesec {
   @extend .margin;
@@ -53,8 +58,8 @@ nav {
 .givepic {
   align: center;
   width: 25%;
-  padding: 20px,
   float: left;
+  padding: 40px;
 }
 
 #missionsec {
@@ -66,6 +71,7 @@ nav {
 #missiontext {
   align-text: center;
   background-color: $orangecolor; 
+  height: 100px;
 }
 
 #storesec {
