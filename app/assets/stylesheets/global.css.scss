@@ -12,11 +12,12 @@ $orangecolor: #eb7b59;
 $font1: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 a {
-  color: $linkcolor;
+  font-color: $linkcolor;
 }
 
 body {
   font-family: $font1;
+  font-color: $textcolor;
 }
 
 .background {
