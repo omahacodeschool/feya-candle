@@ -12,19 +12,4 @@ class Location < ActiveRecord::Base
     end
   end
   
-  def location
-    b=[]
-    b << latitude
-    b << longitude
-    Geocoder.coordinates(b)
-  end
-  
-  def coords(location)
-    a = Geocoder.coordinates(location)
-    lat = a[0]
-    long = a[1]
-    update(latitude: lat)
-    update(longitude: long)
-  end
-  
 end
