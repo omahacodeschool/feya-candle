@@ -67,6 +67,14 @@ nav {
   padding-bottom: 10px;
 }
 
+.navlink a:link {
+  color: $whitecolor;
+}
+
+.navlink a:visited {
+  color: $whitecolor;
+}
+
 #givesec {
   @extend .cf;
   @extend .background;
