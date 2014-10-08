@@ -18,3 +18,5 @@ Location.create(name: "Tennessee Chic", address: "1818 21st Ave S", city: "Nashv
 Location.create(name: "Serendipity 12", address: "2301 12th Ave S", city: "Nashville", state: "TN", zip: 37204, phone: "615.279.5570")
 Location.create(name: "Hazel", address: "902 West Montrose", city: "Chicago", state: "IL", zip: 60613)
 Location.create(name: "Frock Boutique", address: "4 Battery Park Ave", city: "Asheville", state: "NC", zip: 28801, phone: "828.255.4626")
+
+User.create(email: "feyacandle@gmail.com", password: "ilovecandles", password_confirmation: "ilovecandles")
