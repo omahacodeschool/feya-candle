@@ -1,6 +1,8 @@
-<h1>Editing user</h1>
+<% if current_user %>
+  <h1>Editing user</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Cancel Edit', users_path %>
+  <%= link_to 'Show', @user %> |
+  <%= link_to 'Cancel Edit', users_path %>
+<% end %>

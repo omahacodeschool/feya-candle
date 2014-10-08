@@ -9,6 +9,10 @@
 <body>
   <header>
      <%= link_to image_tag('/assets/FEYAPNG.png'), root_path %>
+    <% if current_user %>
+      <%= link_to "Logout", logout_path, :method => :delete, data: {confirm: 'Are you sure?' } %>
+    <% end %>
+
   </header>
   <nav>  
     <div class="navtab">
@@ -51,7 +55,6 @@
           Street Address<br />
           Lincoln, NE 685xx<br />
           402.540.4162<br />
-          <%= link_to "Logout", logout_path, :method => :delete, data: {confirm: 'Are you sure?' } %>
           <a href="mailto:hallowcandle@windstream.net" target="_top">Email Us</a>
         </p>
       </div>
