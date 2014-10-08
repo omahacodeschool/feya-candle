@@ -1,7 +1,7 @@
 $textcolor: #524656;
 $whitecolor: #ffffff; //background color
 $greencolor: #A7c5bd;  //navbar color
-$tancolor: #E5ddcb; //footer color
+$tancolor: #E5DDCB; //footer color
 $linkcolor: #222222;
 
 $purplecolor: #524656;
@@ -11,6 +11,13 @@ $orangecolor: #eb7b59;
 
 $font1: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+a {
+  color: $linkcolor;
+}
+
+body {
+  font-family: $font1;
+}
 
 .background {
   background-color: $whitecolor;
@@ -21,13 +28,19 @@ $font1: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   clear: both;
 }
 
-.margin {
+#containmargin {
+  width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 }
 
 header {
   @extend .background;
+  height: 100px;
+}
+
+.navlink a {
+  color: $linkcolor;
 }
 
 nav {
@@ -36,34 +49,35 @@ nav {
   height: 50px;
 }
 
-
 .navtab {
   width: 25%;
   float: left;
 }
 
 .navlink {
-  text-color: $linkcolor;
-  align: center;
+//  text-color: $linkcolor;
+  text-align: center;
   padding-top: 15px;
   padding-bottom: 10px;
 }
 
 #givesec {
-  @extend .margin;
   @extend .cf;
   @extend .background;
 }
 
 .givepic {
-  align: center;
-  width: 25%;
   float: left;
-  padding: 40px;
+  
+}
+
+.givepiccontent {
+  padding-left: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #missionsec {
-  @extend .margin;
   @extend .cf;
   @extend .background;
 }
@@ -75,36 +89,39 @@ nav {
 }
 
 #storesec {
-  @extend .margin;
   @extend .background;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height:100px;
 }
 
 #storesecloc {
   width: 48%;
-  height: 50px;
   float: left;
   background-color: $purplecolor;
+  height:100px;
 }
 
 #storesecsuggest {
   width: 48%;
-  height: 50px;
   float: right;
   background-color: $redcolor;
+  height:100px;
 }
 
 footer {
   @extend .cf;
-  background-color: $tancolor;
+  background: $tancolor;
   width: 100%;
+  height: 50px;
 }
 
 .footsec {
   width: 33%;  
+  float: left;
 } 
 
 .footcontent {
-  padding: 10px;
-  background-color: $orangecolor;
+  text-align: center;
 }
 
