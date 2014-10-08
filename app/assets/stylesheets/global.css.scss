@@ -1,0 +1,104 @@
+$textcolor: #524656;
+$whitecolor: #ffffff; //background color
+$greencolor: #A7c5bd;  //navbar color
+$tancolor: #E5ddcb; //footer color
+$linkcolor: #222222;
+
+$purplecolor: #524656;
+$redcolor: #Cf4647;
+$orangecolor: #eb7b59;
+
+
+$font1: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+.background {
+  background-color: $whitecolor;
+  width: 100%;
+}
+
+.cf {
+  clear: both;
+}
+
+.margin {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+header {
+  @extend .background;
+}
+
+nav {
+  width: 100%;
+  background-color: $greencolor;
+}
+
+.navlink {
+  width: 25%;
+  text-color: $linkcolor;
+  align-text: center;
+  display: inline block;
+  padding: 10px;
+}
+
+
+#givesec {
+  @extend .margin;
+  @extend .cf;
+  @extend .background;
+}
+
+.givepic {
+  align: center;
+  width: 25%;
+  padding: 20px,
+  float: left;
+}
+
+#missionsec {
+  @extend .margin;
+  @extend .cf;
+  @extend .background;
+}
+
+#missiontext {
+  align-text: center;
+  background-color: $orangecolor; 
+}
+
+#storesec {
+  @extend .margin;
+  @extend .background;
+}
+
+#storesecloc {
+  width: 48%;
+  height: 50px;
+  float: left;
+  background-color: $purplecolor;
+}
+
+#storesecsuggest {
+  width: 48%;
+  height: 50px;
+  float: right;
+  background-color: $redcolor;
+}
+
+footer {
+  @extend .cf;
+  background-color: $tancolor;
+  width: 100%;
+}
+
+.footsec {
+  width: 33%;  
+} 
+
+.footcontent {
+  padding: 10px;
+  background-color: $orangecolor;
+}
+
