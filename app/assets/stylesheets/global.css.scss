@@ -4,9 +4,9 @@ $greencolor: #A7c5bd;  //navbar color
 $tancolor: #E5DDCB; //footer color
 $linkcolor: #222222;
 
-$purplecolor: #524656;
-$redcolor: #Cf4647;
-$orangecolor: #eb7b59;
+$purplecolor: #524656; //unused color from palette
+$redcolor: #Cf4647; //unused color from palette
+$orangecolor: #eb7b59; //unused color from palette
 
 
 $font1: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -29,6 +29,10 @@ body {
   clear: both;
 }
 
+.heightplaceholder { 
+  height:100px;
+}
+
 #containmargin {
   width: 90%;
   margin-left: 5%;
@@ -37,7 +41,7 @@ body {
 
 header {
   @extend .background;
-  height: 100px;
+  @extend .heightplaceholder;
 }
 
 .navlink a {
@@ -84,37 +88,37 @@ nav {
 }
 
 #missiontext {
+  @extend .heightplaceholder;
   align-text: center;
   background-color: $orangecolor; 
-  height: 100px;
 }
 
 #storesec {
   @extend .background;
+  @extend .heightplaceholder;
   margin-top: 40px;
   margin-bottom: 40px;
-  height:100px;
 }
 
 #storesecloc {
+  @extend .heightplaceholder;
   width: 48%;
   float: left;
   background-color: $purplecolor;
-  height:100px;
 }
 
 #storesecsuggest {
+  @extend .heightplaceholder;
   width: 48%;
   float: right;
   background-color: $redcolor;
-  height:100px;
 }
 
 footer {
   @extend .cf;
-  background: $tancolor;
   width: 100%;
-  height: 50px;
+  height:200px;
+  background: $tancolor;
 }
 
 .footsec {
@@ -124,5 +128,6 @@ footer {
 
 .footcontent {
   text-align: center;
+  padding-top: 10px;
 }
 

@@ -21,22 +21,22 @@
   <nav>  
     <div class="navtab">
       <div class="navlink">
-        <a href="#">NAV LINK</a>
+        <%= link_to 'How We Give', about_path %>
       </div>
     </div>
     <div class="navtab">
       <div class="navlink">
-        <a href="#">NAV LINK</a>
+        <%= link_to 'Find Freya Candles', stores_path %>
       </div>
     </div>
     <div class="navtab">
       <div class="navlink">
-        <a href="#">NAV LINK</a>
+        <%= link_to 'Volunteer With Us', volunteer_path %>
       </div>
     </div>
     <div class="navtab">
       <div class="navlink">
-        <a href="#">NAV LINK</a>
+        <%= link_to 'Wholesale', wholesale_path %>
       </div>
     </div>
   </nav>
@@ -54,17 +54,38 @@
   <footer>
     <div class="footsec">
       <div class="footcontent">
-        A
+        <h2>Learn More</h2>
+        <p>Feya Candles<br />
+          Street Address<br />
+          Lincoln, NE 685xx<br />
+          402.540.4162<br />
+          <a href="mailto:hallowcandle@windstream.net" target="_top">Email Us</a>
+        </p>
       </div>
     </div>
     <div class="footsec">
       <div class="footcontent">
-        B
+        <h2>Follow Us</h2>
+        <p>
+          <a href="https://twitter.com/FeyaCandles" target="_blank">Twitter</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/hallowcandlecolincoln"
+             target="_blank">Facebook</a>
+        </p>
+        <p>
+          <a href="http://www.pinterest.com/FeyaCandles/"
+             target="_blank">Pinterest</a>
+        </p>
+        <p>
+          <a href="http://instagram.com/feyacandles" target="_blank">Instagram</a>
+        </p>
       </div>
     </div>
     <div class="footsec">
       <div class="footcontent">
-        C
+        <h2>Newsletter</h2>
+          <%= render 'newsletter_form' %>
       </div>
     </div>
   </footer>
