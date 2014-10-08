@@ -97,10 +97,17 @@ nav {
 }
 
 #missiontext {
-  @extend .heightplaceholder;
-  align-text: center;
   background-color: $orangecolor; 
   padding: 10px;
+}
+
+#missionsubtext {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  font-style: italic;
+  background-color: $orangecolor; 
+  text-align: center;
 }
 
 #storesec {
