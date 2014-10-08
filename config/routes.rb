@@ -12,6 +12,7 @@ FeyaCandle::Application.routes.draw do
   get 'volunteer' => 'pages#volunteer', :as => 'volunteer'
   get 'stores' => 'pages#stores', :as => 'stores'
   get 'wholesale' => 'pages#wholesale', :as => 'wholesale'
+  get 'dashboard' => 'pages#dashboard', :as => 'dashboard'
   
   #Login routes
   get 'login' => 'user_sessions#new', :as => "login"
