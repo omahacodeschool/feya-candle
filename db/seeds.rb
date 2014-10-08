@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Location.create(name: "Uniform Connection", address: "5740 Old Cheney Rd.", city: "Lincoln", state: "NE", zip: 68516)
