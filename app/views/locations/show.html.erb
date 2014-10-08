@@ -1,3 +1,5 @@
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+
 <p>
   <b>Name:</b>
   <%= @location.name %>
@@ -23,15 +25,6 @@
   <%= @location.zip %>
 </p>
 
-<p>
-  <b>Latitude:</b>
-  <%= @location.latitude %>
-</p>
-
-<p>
-  <b>Longitude</b>
-  <%= @location.longitude %>
-<p>
   <b>Phone:</b>
   <%= @location.phone %>
 </p>
@@ -41,6 +34,7 @@
   <%= @location.url %>
 </p>
 
-
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<% if current_user %>
+  <%= link_to 'Edit', edit_location_path(@location) %> |
+  <%= link_to 'Back', locations_path %>
+<% end %>
