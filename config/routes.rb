@@ -15,7 +15,7 @@ FeyaCandle::Application.routes.draw do
   
   #Login routes
   get 'login' => 'user_sessions#new', :as => "login"
-  post 'logout' => 'user_sessions#destroy', :as => "logout"
+  delete 'logout' => 'user_sessions#destroy', :as => "logout"
   
 
 

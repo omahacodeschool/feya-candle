@@ -4,8 +4,17 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
-
+    if params[:search].present?
+      if params[:radius].present?
+        radius = params[:radius]
+        @locations = Location.near(params[:search], radius.to_i, :order => :distance)
+      else
+        @locations = Location.near(params[:search], 50, :order => :distance )
+      end
+    else
+      @locations = Location.all
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @locations }
