@@ -97,7 +97,7 @@ nav {
 }
 
 #missiontext {
-  background-color: $orangecolor; 
+  background-color: $tancolor; 
   padding: 10px;
 }
 
@@ -106,7 +106,7 @@ nav {
   padding-right: 25px;
   padding-bottom: 25px;
   font-style: italic;
-  background-color: $orangecolor; 
+  background-color: $tancolor; 
   text-align: center;
 }
 
@@ -121,7 +121,7 @@ nav {
   @extend .heightplaceholder;
   width: 40%;
   float: left;
-  background-color: $redcolor;
+  background-color: $greencolor;
   padding: 10px;
 }
 
@@ -129,7 +129,7 @@ nav {
   @extend .heightplaceholder;
   width: 40%;
   float: right;
-  background-color: $redcolor;
+  background-color: $greencolor;
   padding: 10px;
 }
 
