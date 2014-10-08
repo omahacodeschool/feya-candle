@@ -9,15 +9,20 @@ $redcolor: #Cf4647; //unused color from palette
 $orangecolor: #eb7b59; //unused color from palette
 
 
-$font1: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font1: 'Helvetica Neue';
+$font2: Helvetica, Arial, sans-serif;
 
-a {
-  font-color: $linkcolor;
+a:link {
+  color: $linkcolor;
+}
+
+a:visited {
+  color: $linkcolor;
 }
 
 body {
   font-family: $font1;
-  font-color: $textcolor;
+  color: $textcolor;
 }
 
 .background {
@@ -42,10 +47,6 @@ body {
 header {
   @extend .background;
   @extend .heightplaceholder;
-}
-
-.navlink a {
-  color: $linkcolor;
 }
 
 nav {
@@ -91,6 +92,7 @@ nav {
   @extend .heightplaceholder;
   align-text: center;
   background-color: $orangecolor; 
+  padding: 10px;
 }
 
 #storesec {
@@ -102,22 +104,24 @@ nav {
 
 #storesecloc {
   @extend .heightplaceholder;
-  width: 48%;
+  width: 40%;
   float: left;
-  background-color: $purplecolor;
+  background-color: $redcolor;
+  padding: 10px;
 }
 
 #storesecsuggest {
   @extend .heightplaceholder;
-  width: 48%;
+  width: 40%;
   float: right;
   background-color: $redcolor;
+  padding: 10px;
 }
 
 footer {
   @extend .cf;
   width: 100%;
-  height:200px;
+  height:230px;
   background: $tancolor;
 }
 
