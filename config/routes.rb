@@ -11,7 +11,7 @@ FeyaCandle::Application.routes.draw do
   get 'about' => 'pages#about', :as => "about"
   get 'volunteer' => 'pages#volunteer', :as => 'volunteer'
   get 'stores' => 'pages#stores', :as => 'stores'
-  get 'wholesale' => 'pages#wholesale', :as => 'wholesale'
+  get 'wholesale' => 'products#index', :as => 'products'
   get 'dashboard' => 'pages#dashboard', :as => 'dashboard'
   
   #Login routes

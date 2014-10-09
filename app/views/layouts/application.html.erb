@@ -11,11 +11,10 @@
 <!--TODO indentation issue
    -->
   <header>
-    
-<!-- TODO change path to just the name of the image (not the whole path) -->
-     <%= link_to image_tag('/assets/FEYAPNG.png'), root_path %>
+     <%= link_to image_tag('FEYAPNG.png'), root_path %>
     <% if current_user %>
       <%= link_to "Logout", logout_path, :method => :delete, data: {confirm: 'Are you sure?' } %>
+    <%= link_to "Dashboard", dashboard_path %>
     <% end %>
     <div id="socialbuttons">
       <ul>
@@ -52,7 +51,7 @@
     </div>
     <div class="navtab">
       <div class="navlink">
-        <%= link_to 'Wholesale', wholesale_path %>
+        <%= link_to 'Wholesale', products_path %>
       </div>
     </div>
   </nav>
