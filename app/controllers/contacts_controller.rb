@@ -12,8 +12,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     
     if @contact.save
-      # mailer will go here
-      # send confirmation email to submitter here
+      send_inquiry_mailers(@contact)      
       redirect_back_or_to root_path, :notice => "Your message has been sent."
     else
       redirect_to :back
