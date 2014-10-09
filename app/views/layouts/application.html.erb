@@ -16,22 +16,7 @@
       <%= link_to "Logout", logout_path, :method => :delete, data: {confirm: 'Are you sure?' } %>
     <%= link_to "Dashboard", dashboard_path %>
     <% end %>
-    <div id="socialbuttons">
-      <ul>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-      </ul>
-    </div>
+    
   </header>
   <nav>  
     <div class="navtab">
@@ -68,7 +53,7 @@
   </div>
   
   <footer>
-    <div class="footsecleft">
+    <div class="footsec">
       <div class="footcontent">
         <h2>Learn More</h2>
         <p>Feya Candles<br />
@@ -79,7 +64,7 @@
         </p>
       </div>
     </div>
-    <div class="footsecmid">
+    <div class="footsec">
       <div class="footcontent">
         <h2>Follow Us</h2>
         <p>
@@ -98,7 +83,7 @@
         </p>
       </div>
     </div>
-    <div class="footsecright">
+    <div class="footsec">
       <div class="footcontent">
         <h2>Newsletter</h2>
           <%= render '/pages/newsletter_form' %>

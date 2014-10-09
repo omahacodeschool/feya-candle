@@ -1,5 +1,10 @@
 <p>Find a store carrying Feya Candles near you, and give them a high-five for helping feed the world, one candle at a time!</p>
 
+<p>
+  <% if current_user %>
+    <%= link_to 'Add a New Store', new_location_path %>
+  <% end %>
+</p>
 <img src="http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=markerStyles|<% @locations.each do |l| %><%= l.latitude%>%2C<%= l.longitude %>| <% end %>">
 <!-- TODO create a class method in the location class to return the info for the loop above -->
 
@@ -19,19 +24,19 @@
       <%= link_to(location.name, location_path(location.id)) %><br />
       <%= location.address %><br />
       <%= location.listing_address %><br />
-      <% if location.phone? %>
-        <%= location.phone %><br />
+        <% if location.phone? %>
+          <%= location.phone %><br />
+        <% end %>
+      <% if current_user %>
+        <td><%= link_to 'Show', location %></td>
+        <td><%= link_to 'Edit', edit_location_path(location) %></td>
+        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
       <% end %>
-    </p>
-    <% if current_user %>
-      <td><%= link_to 'Show', location %></td>
-      <td><%= link_to 'Edit', edit_location_path(location) %></td>
-      <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
-  <% end %>
+  </p>
 </div>
 
-<br />
+
 <% if current_user %>
   <%= link_to 'New Location', new_location_path %>
 <% end %>
