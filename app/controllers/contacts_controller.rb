@@ -9,10 +9,10 @@ class ContactsController < ApplicationController
   end
   
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new(params[:contact])  
     
     if @contact.save
-      send_inquiry_mailers(@contact)      
+      @contact.send_inquiry_mailers     
       redirect_back_or_to root_path, :notice => "Your message has been sent."
     else
       redirect_to :back

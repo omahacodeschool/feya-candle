@@ -1,19 +1,21 @@
 class ContactMailer < ActionMailer::Base
   default from: "feyacandle@gmail.com"
-  @url = contacts_path
   
   def wholesale_inquiry(contact)
     @contact = contact
+    @url = contacts_path
     mail(:to => "feyacandle@gmail.com", :subject => "Wholesale inquiry")
   end
   
   def volunteer_inquiry(contact)
     @contact = contact
+    @url = contacts_path
     mail(:to => "feyacandle@gmail.com", :subject => "Volunteer inquiry")
   end
   
   def suggest_inquiry(contact)
     @contact = contact
+    @url = contacts_path
     mail(:to => "feyacandle@gmail.com", :subject => "Suggested store inquiry")
   end
   
