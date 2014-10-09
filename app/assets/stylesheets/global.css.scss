@@ -25,7 +25,7 @@ body {
   color: $textcolor;
 }
 
-.background {
+.background-white {
   background-color: $whitecolor;
   width: 100%;
 }
@@ -45,7 +45,7 @@ body {
 }
 
 header {
-  @extend .background;
+  @extend .background-white;
   height: 300px;;
 }
 
@@ -92,7 +92,7 @@ nav {
 
 #givesec {
   @extend .cf;
-  @extend .background;
+  @extend .background-white;
 }
 
 .givepic {
@@ -108,11 +108,12 @@ nav {
 
 #missionsec {
   @extend .cf;
-  @extend .background;
+  @extend .background-white;
 }
 
 #missiontext {
   background-color: $tancolor; 
+  height: 400px;
   padding: 10px;
 }
 
@@ -125,12 +126,7 @@ nav {
   text-align: center;
 }
 
-#storesec {
-  @extend .background;
-  height: 300px;
-}
-
-.storeblockleft {
+#storeblockleft {
   margin: 40px auto 0 auto;
   height: 300px;
   width: 100%;
@@ -138,8 +134,8 @@ nav {
   background-color: $greencolor;
 }
 
-.storeblockright {
-  margin: 40px auto;
+#storeblockright {
+  margin: 0 auto 40px auto;
   height: 300px;
   width: 100%;
   float: right;
@@ -149,13 +145,12 @@ nav {
 
 .storecontent {
   padding: 20px 35px 20px 35px;
-
 }
 
 footer {
-
   width: 100%;
   background: $tancolor;
+  height: 250px;
 }
 
 .footsecleft {
