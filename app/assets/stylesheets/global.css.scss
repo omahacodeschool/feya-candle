@@ -133,12 +133,16 @@ nav {
 .storeblockleft {
   margin: 40px auto 0 auto;
   height: 300px;
+  width: 100%;
+  float: left;
   background-color: $greencolor;
 }
 
 .storeblockright {
   margin: 40px auto;
   height: 300px;
+  width: 100%;
+  float: right;
   background-color: $greencolor;
 }
 
@@ -154,10 +158,28 @@ footer {
   background: $tancolor;
 }
 
-.footsec {
+.footsecleft {
+  display:inline-block;    
   width: 100%;
+  height: 250px; 
+  float: left;
   background: $tancolor;
 } 
+
+.footsecmid {
+  display:inline-block;    
+  width: 100%;
+  height: 250px; 
+  background: $tancolor;
+} 
+
+.footsecright {
+  display:inline-block;    
+  width: 100%;
+  height: 250px; 
+  float: left;
+  background: $tancolor;
+}
 
 .footcontent {
   text-align: center;
