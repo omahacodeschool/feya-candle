@@ -38,11 +38,11 @@ body {
   height:100px;
 }
 
-#containmargin {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
+//#containmargin {
+//  width: 90%;
+//  margin-left: 5%;
+//  margin-right: 5%;
+//}
 
 header {
   @extend .background-white;
@@ -113,7 +113,7 @@ nav {
 
 #missiontext {
   background-color: $tancolor; 
-  height: 400px;
+  height: 200px;
   padding: 10px;
 }
 
@@ -128,7 +128,7 @@ nav {
 
 #storeblockleft {
   margin: 40px auto 0 auto;
-  height: 300px;
+  height: 250px;
   width: 100%;
   float: left;
   background-color: $greencolor;
@@ -136,7 +136,7 @@ nav {
 
 #storeblockright {
   margin: 0 auto 40px auto;
-  height: 300px;
+  height: 200px;
   width: 100%;
   float: right;
   background-color: $greencolor;
