@@ -1,0 +1,17 @@
+<h1>Contact form submissions</h1>
+<% if current_user %>
+
+  <% @contacts.each do |contact| %>
+    <p>Name: <%= contact.name %></br>
+       <% if contact.company? %>
+         Company: <%= contact.company %></br>
+        <% end %>
+        Email: <%= contact.email %></br>
+        Phone: <%= contact.phone %>
+      </p>
+      <p>Message:
+        <%= simple_format contact.message %>
+      </p>
+      <%= link_to 'Delete this contact', contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+<% end %>
