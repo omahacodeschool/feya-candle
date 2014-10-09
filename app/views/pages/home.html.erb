@@ -3,19 +3,13 @@
 <p><center>Every purchase changes a life for the better!  Little by little, we can change the world!</center></p>
 <div id="givsec">
   <div class="givepic">
-    <div class="givepiccontent">
-      <%= image_tag('http://placekitten.com/g/300/200') %>
-    </div>
+    <%= image_tag('three_candles.jpg') %>
   </div>
   <div class="givepic">
-    <div class="givepiccontent">
-      <%= image_tag('http://placekitten.com/g/300/200') %>
-    </div>
+    <%= image_tag('boy_eating.jpg') %>
   </div>
   <div class="givepic">
-    <div class="givepiccontent">
-      <%= image_tag('http://placekitten.com/g/300/200') %>
-    </div>
+    <%= image_tag('back_candle.jpg') %>
   </div>
 </div>
 
@@ -35,18 +29,20 @@
     <p>
       To purchase Feya Candles, find a store near you.
     </p>
-    
-    <%= form_tag locations_path, :method => :get do %>
-      <p>
-      Enter zipcode: <%= text_field_tag :search, params[:search] %></br>
+      <%= form_tag locations_path, :method => :get do %>
+    <p>
+      Enter zipcode: <%= text_field_tag :search, params[:search] %>
+    </p>
+    <p>
       Within <%= select_tag :radius, options_for_select(["10", "25", "50", "100", "200", "500"])%> miles
-      </p>
-      <p>
+    </p>
+    <p>
       <%= submit_tag "Search" %>
-      </p>  
+    </p>  
     <% end %>
   </div>
 </div>
+
 <div id="storeblockright">
   <div class="storecontent">
     <h2>Suggest a Store</h2>

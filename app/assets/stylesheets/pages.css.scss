@@ -17,10 +17,20 @@ textarea {
   height: 60px;
 }
 
-#aboutvid iframe {
-  margin: 20px auto;
-  width: 100%;
-  height:100%;
+#aboutvid {
+  max-width: 560px;
+  max-height: 315px;
+  margin: 0px auto;
   position: relative;
+  padding-bottom: 75%;
+  height: 0 px;
 }
-
+ 
+#aboutvid iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+ 
