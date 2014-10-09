@@ -1,4 +1,6 @@
-<p>Find a store carrying Feya Candles near you, and give them a high-five for helping feed the world, one candle at a time!</p>
+<h1>Find a Store</h1>
+
+<p>Search for a store carrying Feya Candles near you, and give them a high-five for helping feed the world, one candle at a time!</p>
 
 <p>
   <% if current_user %>
@@ -10,7 +12,9 @@
 
 <%= form_tag locations_path, :method => :get do %>
   <p>
-    Enter zipcode: <%= text_field_tag :search, params[:search] %></br>
+    Enter zipcode: <%= text_field_tag :search, params[:search] %>
+  </p>
+  <p>
     Within <%= select_tag :radius, options_for_select(["10", "25", "50", "100", "200", "500"])%> miles
   </p>
   <p>
@@ -19,8 +23,8 @@
 <% end %>
 
 <div id="locationtab">
-  <p>
-    <% @locations.each do |location| %>
+  <% @locations.each do |location| %>
+    <p>
       <%= link_to(location.name, location_path(location.id)) %><br />
       <%= location.address %><br />
       <%= location.listing_address %><br />
@@ -30,13 +34,8 @@
       <% if current_user %>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
+        <td><%= link_to 'Delete', location, method: :delete, data: { confirm: 'Are you sure?' } %></td><br />
       <% end %>
-    <% end %>
-  </p>
+    </p>
+  <% end %>
 </div>
-
-
-<% if current_user %>
-  <%= link_to 'New Location', new_location_path %>
-<% end %>
