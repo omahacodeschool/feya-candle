@@ -1,3 +1,7 @@
+<h1>Wholesale Information</h1>
+
+<p>If you are a business owner and are interested in carrying Feya Candles in your store, please complete the form below, and we will be in touch!</p>
+
 <!-- TODO: add product index image -->
 
 <% @products.each do |product| %>
@@ -17,3 +21,5 @@
 <% if current_user %>
   <%= link_to 'New Product', new_product_path %>
 <% end %>
+
+<%= render "/pages/wholesale_contact_form" %>

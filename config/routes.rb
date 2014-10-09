@@ -4,7 +4,7 @@ FeyaCandle::Application.routes.draw do
   get "password_resets/edit"
   get "password_resets/update"
 
-  resources :locations, :users, :products, :password_resets, :user_sessions
+  resources :locations, :users, :products, :password_resets, :user_sessions, :contacts
   
   get 'home' => 'pages#home', :as => 'home'
   root :to => 'pages#home'

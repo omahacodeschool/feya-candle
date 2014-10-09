@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.all
+    @contact = Contact.new
   end
   
   def new

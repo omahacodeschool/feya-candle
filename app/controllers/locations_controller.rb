@@ -4,6 +4,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
+    @contact = Contact.new
     if params[:search].present?
       if params[:radius].present?
         radius = params[:radius]

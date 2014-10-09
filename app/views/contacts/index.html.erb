@@ -1,0 +1,41 @@
+<h1>Contact form submissions</h1>
+<% if current_user %>
+
+  <% @contacts.each do |contact| %>
+      <% if contact.category == "wholesale" %>
+      <h3>Wholesale</h3>
+        <p>Name: <%= contact.name %></br>
+          Company: <%= contact.company %></br>
+          Email: <%= contact.email %></br>
+          Phone: <%= contact.phone %>
+        </p>
+        <p>Message:
+          <%= simple_format contact.message %>
+        </p>
+        <%= link_to 'Delete this contact', contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% elsif contact.category == "volunteer" %>
+      
+        <h3>Volunteer</h3>
+          <p>Name: <%= contact.name %></br>
+            Email: <%= contact.email %></br>
+            Phone: <%= contact.phone %>
+          </p>
+          <p>Message:
+            <%= simple_format contact.message %>
+          </p>
+          <%= link_to 'Delete this contact', contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% elsif contact.category == "suggest" %>
+        
+        <h3>Suggest a store</h3>
+          <p>Name: <%= contact.name %></br>
+            Email: <%= contact.email %></br>
+            Phone: <%= contact.phone %>
+          </p>
+          <p>Message:
+            <%= simple_format contact.message %>
+          </p>
+          <%= link_to 'Delete this contact', contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        
+    <% end %>
+<% end %>
