@@ -1,0 +1,13 @@
+Hello, Sarah!
+
+==============================================
+
+You have received a wholesale inquiry.
+
+Name: <%= @contact.name %>
+Company: <%= @contact.company %>
+Message: <%= simple_format(@contact.message) %>
+
+<%= link_to("Click here", @url) %> to view full message details, including contact information.
+
+Have a great day!
