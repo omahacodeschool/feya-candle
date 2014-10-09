@@ -1,7 +1,9 @@
 <p>Find a store carrying Feya Candles near you, and give them a high-five for helping feed the world, one candle at a time!</p>
 
 <img src="http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=markerStyles|<% @locations.each do |l| %><%= l.latitude%>%2C<%= l.longitude %>| <% end %>">
+<!-- TODO create a class method in the location class to return the info for the loop above -->
 
+<!-- TODO fix indentation below -->
 <%= form_tag locations_path, :method => :get do %>
   <p>
     Enter zipcode: <%= text_field_tag :search, params[:search] %></br>

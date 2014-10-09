@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+<!--TODO indentation issue
+   -->
   <header>
+    
+<!-- TODO change path to just the name of the image (not the whole path) -->
      <%= link_to image_tag('/assets/FEYAPNG.png'), root_path %>
     <% if current_user %>
       <%= link_to "Logout", logout_path, :method => :delete, data: {confirm: 'Are you sure?' } %>
@@ -56,9 +61,10 @@
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
+  
   <div id="containmargin">
 
-  <%= yield %>
+    <%= yield %>
   
   </div>
   
