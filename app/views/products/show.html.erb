@@ -1,0 +1,25 @@
+<h1>Product Information</h1>
+
+<p>
+  <b>Name:</b>
+  <%= @product.name %>
+</p>
+
+<p>
+  <%= @product.image %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @product.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @product.price %>
+</p>
+
+<% if current_user %>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Products Index', products_path %>
+<% end %>
