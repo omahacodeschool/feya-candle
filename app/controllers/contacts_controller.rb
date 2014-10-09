@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])  
     
     if @contact.save
-      @contact.send_inquiry_mailers     
+      @contact.send_inquiry_mailers
       redirect_back_or_to root_path, :notice => "Your message has been sent."
     else
       redirect_to :back

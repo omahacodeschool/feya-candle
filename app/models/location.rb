@@ -18,4 +18,12 @@ class Location < ActiveRecord::Base
       "#{city}, #{state} #{zip.to_s}"
   end
   
+  def self.search_by_input(zip, radius)
+    if radius != nil
+      @locations = self.near(zip, radius.to_i, :order => :distance)
+    else
+      @locations = self.near(zip, 50, :order => :distance )
+    end
+  end
+  
 end

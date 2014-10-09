@@ -5,13 +5,9 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @contact = Contact.new
+    
     if params[:search].present?
-      if params[:radius].present?
-        radius = params[:radius]
-        @locations = Location.near(params[:search], radius.to_i, :order => :distance)
-      else
-        @locations = Location.near(params[:search], 50, :order => :distance )
-      end
+      @locations = Location.search_by_input(params[:search], params[:radius])
     else
       @locations = Location.all
     end
