@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# seed data for locations
 Location.create(name: "Uniform Connection", address: "5740 Old Cheney Rd", city: "Lincoln", state: "NE", zip: 68516)
 Location.create(name: "Body Nouveaux Spa", address: "5600 S. 48th St", city: "Lincoln", state: "NE", zip: 68516, phone: "402.476.7855")
 Location.create(name: "Indigo Bridge Books", address: "701 P St #102", city: "Lincoln", state: "NE", zip: 68508, phone: "402.477.7770")
@@ -19,4 +13,8 @@ Location.create(name: "Serendipity 12", address: "2301 12th Ave S", city: "Nashv
 Location.create(name: "Hazel", address: "902 West Montrose", city: "Chicago", state: "IL", zip: 60613)
 Location.create(name: "Frock Boutique", address: "4 Battery Park Ave", city: "Asheville", state: "NC", zip: 28801, phone: "828.255.4626")
 
+# seed data for user
 User.create(email: "feyacandle@gmail.com", password: "ilovecandles", password_confirmation: "ilovecandles")
+
+# seed data for products
+Product.create(name: "Bakers Dozen", price: "$15.00", image: "", description: "Ever walk into a bakery and never want to leave? Us too. A combination of freshly-baked pies, cupcakes, frosting and artisan bread - this is a bakery lovers dream!")
