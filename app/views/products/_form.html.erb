@@ -12,20 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <h4><%= f.label :name %>
+    <%= f.text_field :name %></h4>
   </div>
   <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
+    <% if @product.image? %>
+      <p>Current image:</p>
+      <%= image_tag @product.image_url.to_s %>
+    <% end %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <h4><%= f.label :description %>
+        <%= f.text_field :description %></h4>
   </div>
   <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
+    <h4><%= f.label :price %>
+        <%= f.text_field :price %></h4>
   </div>
   <div class="actions">
     <p>
