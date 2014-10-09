@@ -12,26 +12,10 @@
    -->
   <header>
      <%= link_to image_tag('FEYAPNG.png'), root_path %>
-    <% if current_user %>
-      <%= link_to "Logout", logout_path, :method => :delete, data: {confirm: 'Are you sure?' } %>
-    <%= link_to "Dashboard", dashboard_path %>
-    <% end %>
-    <div id="socialbuttons">
-      <ul>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-        <li>
-          <%= image_tag('http://placekitten.com/g/30/30') %>
-        </li>
-      </ul>
-    </div>
+     <p>
+       changing the world... one candle at a time
+     </p>
+    
   </header>
   <nav>  
     <div class="navtab">
@@ -63,7 +47,7 @@
   
   <div id="containmargin">
 
-    <%= yield %>
+  <%= yield %>
   
   </div>
   

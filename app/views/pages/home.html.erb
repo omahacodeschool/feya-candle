@@ -20,35 +20,38 @@
 </div>
 
 <div id="missionsec">
-  <div id="missiontext">
-    <h2>Mission Statement</h2>
-    <div id="missionsubtext">
-      <h3>Feya Candles gives a meal to someone in need with every candle sold.<br />  Through these candles, we will feed the world and make it a better place.</h3>
-    </div>
+  <div class="missionsubtext">
+    <h2>Mission Statement
+    </h2>
+    <h3>Feya Candles gives a meal to someone in need with every candle sold.<br />  Through these candles, we will feed the world and make it a better place.
+    </h3>
   </div>
 </div>
 
-<div id="storesec">
-  <div class="storeblockleft">
-    <div class="storecontent">
-      <h2>Store Locator</h2>
-      <p>To purchase Feya Candles, find a store near you.</p>
-        <%= form_tag locations_path, :method => :get do %>
-          <p>
-          Enter zipcode: <%= text_field_tag :search, params[:search] %></br>
-          Within <%= select_tag :radius, options_for_select(["10", "25", "50", "100", "200", "500"])%> miles
-        </p>
-        <p>
-          <%= submit_tag "Search" %>
-        </p>  
-      <% end %>
-    </div>
-  </div>
-  <div class="storeblockright">
-    <div class="storecontent">
-      <h2>Suggest a Store</h2>
-      <p>Encourage your favorite store to carry Feya Candles.</p>
-    </div>
+
+<div id="storeblockleft">
+  <div class="storecontent">
+    <h2>Store Locator</h2>
+    <p>
+      To purchase Feya Candles, find a store near you.
+    </p>
+    
+    <%= form_tag locations_path, :method => :get do %>
+      <p>
+      Enter zipcode: <%= text_field_tag :search, params[:search] %></br>
+      Within <%= select_tag :radius, options_for_select(["10", "25", "50", "100", "200", "500"])%> miles
+      </p>
+      <p>
+      <%= submit_tag "Search" %>
+      </p>  
+    <% end %>
   </div>
 </div>
+<div id="storeblockright">
+  <div class="storecontent">
+    <h2>Suggest a Store</h2>
+    <p>Encourage your favorite store to carry Feya Candles.</p>
+  </div>
+</div>
+
 

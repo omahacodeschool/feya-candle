@@ -25,7 +25,7 @@ body {
   color: $textcolor;
 }
 
-.background {
+.background-white {
   background-color: $whitecolor;
   width: 100%;
 }
@@ -45,13 +45,17 @@ body {
 }
 
 header {
-  @extend .background;
-  height: 300px;;
+  @extend .background-white;
+  text-align: center;
+  image-align: center;
 }
 
 header img {
   max-height:300px;
-  float:left;
+}
+
+header p {
+  padding-bottom:20px;
 }
 
 #socialbuttons {
@@ -92,98 +96,63 @@ nav {
 
 #givesec {
   @extend .cf;
-  @extend .background;
+  @extend .background-white;
+  margin: 20px auto;
 }
 
 .givepic {
-  float: left;
+  justify-content: space-between;
   
 }
 
 .givepiccontent {
-  padding-left: 35px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin: 20px auto;
 }
 
 #missionsec {
-  @extend .cf;
-  @extend .background;
-}
-
-#missiontext {
-  background-color: $tancolor; 
-  padding: 10px;
-}
-
-#missionsubtext {
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 25px;
-  font-style: italic;
-  background-color: $tancolor; 
+  margin: 20px auto;
+  @extend .background-white;
   text-align: center;
+  background-color: $tancolor;
 }
 
-#storesec {
-  @extend .background;
-  height: 300px;
+.missionsubtext {
+  padding:20px;
+  font-style: italic;
 }
 
-.storeblockleft {
-  margin: 40px auto 0 auto;
+#storeblockleft {
+  margin: 20px auto;
   height: 300px;
-  width: 400px;
-  float: left;
+  width: 100%;
   background-color: $greencolor;
 }
 
-.storeblockright {
-  margin: 40px auto;
+#storeblockright {
+  margin: 20px auto;
   height: 300px;
-  width: 400px;
-  float: right;
+  width: 100%;
   background-color: $greencolor;
 }
-
 
 .storecontent {
   padding: 20px 35px 20px 35px;
-
 }
+
 
 footer {
-  @extend .cf;
   width: 100%;
-  height:250px;
   background: $tancolor;
+  text-align: center;
+  margin: 20px auto auto auto;
 }
 
-.footsecleft {
-  display:inline-block;    
-  width: 350px;
-  height: 250px; 
-  float: left;
-  background: $tancolor;
+.footsec {   
+  width: 100%;
 } 
 
-.footsecmid {
-  display:inline-block;    
-  width: 350px;
-  height: 250px; 
-  background: $tancolor;
-} 
-
-.footsecright {
-  display:inline-block;    
-  width: 350px;
-  height: 250px; 
-  float: left;
-  background: $tancolor;
-}
 
 .footcontent {
-  text-align: center;
   padding-top: 10px;
 }
 
