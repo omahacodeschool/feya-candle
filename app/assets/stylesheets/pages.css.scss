@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#volunteer img{
+#volunteerpic img{
   max-height:300px;
   float:left;
   padding-right:10px;
@@ -10,6 +10,13 @@
   padding-bottom: 10px;
 }
 
-#volunteer {
+#volunteercl {
   clear: both;
 }
+
+#locationtab table {
+  border-collapse: separate;
+  border-spacing: 50px 2px;
+}
+
+

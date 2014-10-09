@@ -29,13 +29,26 @@
 </div>
 
 <div id="storesec">
-  <div id="storesecloc">
-    <h2>Store Locator</h2>
-    <p>To purchase Feya Candles, find a store near you.</p>
+  <div id="storeblock">
+    <div id="storecontent">
+      <h2>Store Locator</h2>
+      <p>To purchase Feya Candles, find a store near you.</p>
+        <%= form_tag locations_path, :method => :get do %>
+          <p>
+          Enter zipcode: <%= text_field_tag :search, params[:search] %></br>
+          Within <%= select_tag :radius, options_for_select(["10", "25", "50", "100", "200", "500"])%> miles
+        </p>
+        <p>
+          <%= submit_tag "Search" %>
+        </p>  
+      <% end %>
+    </div>
   </div>
-  <div id="storesecsuggest">
-    <h2>Suggest a Store</h2>
-    <p>Encourage your favorite store to carry Feya Candles.</p>
+  <div id="storeblock">
+    <div id="storecontent">
+      <h2>Suggest a Store</h2>
+      <p>Encourage your favorite store to carry Feya Candles.</p>
+    </div>
   </div>
 </div>
 
