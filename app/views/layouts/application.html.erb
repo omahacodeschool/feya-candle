@@ -15,7 +15,12 @@
      <p>
        changing the world... one candle at a time
      </p>
-    
+     <p>
+       <% if current_user %>
+         <%= link_to "Logout", logout_path, :method => :delete, data: {confirm: 'Are you sure?' } %>
+         <%= link_to "Dashboard", dashboard_path %>
+       <% end %>
+     </p>  
   </header>
   <nav>  
     <div class="navtab">

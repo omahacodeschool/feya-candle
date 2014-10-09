@@ -70,20 +70,18 @@ header p {
 nav {
   width: 100%;
   background-color: $greencolor;
-  height: 50px;
-  @extend .cf
+  height: 70px;
+  text-align: center;
 }
 
 .navtab {
   width: 25%;
   float: left;
+  background-color:$greencolor;
 }
 
 .navlink {
-//  text-color: $linkcolor;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  padding:10px;
 }
 
 .navlink a:link {
