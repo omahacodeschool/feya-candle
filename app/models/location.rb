@@ -4,6 +4,8 @@ class Location < ActiveRecord::Base
   geocoded_by :full_street_address
   after_validation :geocode, :if => :address_changed?
   
+  # TODO add tomdoc
+  # TODO figure out how to geocode without an address
   def full_street_address
     if address?
       address + ", " + city + ", " + state
