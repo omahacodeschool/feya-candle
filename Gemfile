@@ -8,9 +8,9 @@ gem 'rails', '3.2.19'
 gem 'pg'
 gem 'pry-rails'
 gem 'rspec-rails'
+gem 'rmagick', require: false
 gem 'carrierwave'
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'rmagick'
 
 
 # Gems used only for assets and not required
