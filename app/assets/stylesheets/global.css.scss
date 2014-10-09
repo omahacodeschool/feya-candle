@@ -133,8 +133,8 @@ nav {
 }
 
 #storesecloc {
-  @extend .heightplaceholder;
-  width: 40%;
+  height: 200px;
+  width: 400px;
   float: left;
   background-color: $greencolor;
   padding: 10px;
@@ -142,7 +142,7 @@ nav {
 
 #storesecsuggest {
   @extend .heightplaceholder;
-  width: 40%;
+  width: 400px;
   float: right;
   background-color: $greencolor;
   padding: 10px;

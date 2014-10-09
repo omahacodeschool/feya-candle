@@ -14,4 +14,8 @@ class Location < ActiveRecord::Base
     end
   end
   
+  def listing_address
+      "#{city}, #{state} #{zip.to_s}"
+  end
+  
 end

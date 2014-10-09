@@ -24,14 +24,17 @@
   <b>Zip:</b>
   <%= @location.zip %>
 </p>
-
-  <b>Phone:</b>
-  <%= @location.phone %>
+  <% if @location.phone %>
+    <b>Phone:</b>
+    <%= @location.phone %>
+  <% end %>
 </p>
 
 <p>
-  <b>Url:</b>
-  <%= @location.url %>
+  <% if @location.url? %>
+    <b>Url:</b>
+    <%= @location.url %>
+  <% end %>
 </p>
 
 <% if current_user %>
