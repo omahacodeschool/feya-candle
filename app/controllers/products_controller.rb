@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
   
   def create
-    @product = Product.new
+    @product = Product.new(params[:product])
     
     if @product.save
       redirect_to product_path(@product.id), :notice => "Product created."
@@ -41,6 +41,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find_by_id(params[:id])
     @product.destroy
+    redirect_to products_path, :notice => "Product deleted"
   end
   
 end

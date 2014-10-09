@@ -15,7 +15,8 @@ class Location < ActiveRecord::Base
   end
   
   def listing_address
-    address + "\n" + city + ", " + state + " " + zip
+    stringify_address = address + "\n" + city + ", " + state + " " + zip.to_s
+    stringify_address
   end
   
-end
+end 

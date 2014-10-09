@@ -19,7 +19,7 @@
     <%= f.file_field :image %>
     <% if @product.image? %>
       <p>Current image:</p>
-      <%= image_tag @product.image_url.to_s %>
+      <%= image_tag @product.image_url(:thumb).to_s %>
     <% end %>
   </div>
   <div class="field">
