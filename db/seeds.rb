@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# seed data for locations
 Location.create(name: "Uniform Connection", address: "5740 Old Cheney Rd", city: "Lincoln", state: "NE", zip: 68516)
 Location.create(name: "Body Nouveaux Spa", address: "5600 S. 48th St", city: "Lincoln", state: "NE", zip: 68516, phone: "402.476.7855")
 Location.create(name: "Indigo Bridge Books", address: "701 P St #102", city: "Lincoln", state: "NE", zip: 68508, phone: "402.477.7770")
@@ -23,11 +17,9 @@ Location.create(name: "Frock Boutique", address: "4 Battery Park Ave", city: "As
 User.create(email: "feyacandle@gmail.com", password: "ilovecandles", password_confirmation: "ilovecandles")
 
 # seed data for products
-Product.create(name: "Bakers Dozen", price: "$15.00", description: "Ever walk into a bakery and never want to leave? Us too. A combination of freshly-baked pies, cupcakes, frosting and artisan bread - this is a bakery lovers dream!")
-Product.create(name: "Brown Sugar & Fig", price: "$15.00", description: "Sweet and smooth yet a little bit exotic, experience the calming fragrance of rich brown sugar glazed atop a Mediterranean fig - paradise.")
-Product.create(name: "Lavender", price: "$15.00", description: "Calm yourself as you walk through a field of lavendar along the french hillside in the afternoon - yea, it pretty much feels like that.")
-Product.create(name: "Lemon Spritz", price: "$15.00", description: "Crisp and light - brighten up your day with a lemon spritz fragrance: sassy lemon paired with a hint of sweet bakery goodness.")
-Product.create(name: , price: "$15.00", description: "")
-Product.create(name: , price: "$15.00", description: "")
-Product.create(name: , price: "$15.00", description: "")
-Product.create(name: , price: "$15.00", description: "")
+Product.create(name: "Bakers Dozen", image: "/product_generic.jpg", price: "$15.00", description: "Ever walk into a bakery and never want to leave? Us, too. A combination of freshly-baked pies, cupcakes, frosting and artisan bread - this is a bakery lovers dream!")
+Product.create(name: "Brown Sugar & Fig", image: "/product_generic.jpg", price: "$15.00", description: "Sweet and smooth yet a little bit exotic, experience the calming fragrance of rich brown sugar glazed atop a Mediterranean fig - paradise.")
+Product.create(name: "Lavender", image: "/product_generic.jpg", price: "$15.00", description: "Calm yourself as you walk through a field of lavendar along the french hillside in the afternoon - yea, it pretty much feels like that.")
+Product.create(name: "Lemon Spritz", image: "/product_generic.jpg", price: "$15.00", description: "Crisp and light - brighten up your day with a lemon spritz fragrance: sassy lemon paired with a hint of sweet bakery goodness.")
+Product.create(name: "Sage & Cinnamon", image: "/product_generic.jpg", price: "$15.00", description: "The warm comfort of spicy cinnamon alongside the smooth herbal fragrance of freshly-ground sage gives you the perfect balance of a home filled with love and comfort.")
+Product.create(name: "Sandalwood", image: "/product_generic.jpg", price: "$15.00", description: "Rich and smooth, this scent has notes of sweet wood tones with earthy-green top notes to take you to an exotic getaway every time you light it.")
