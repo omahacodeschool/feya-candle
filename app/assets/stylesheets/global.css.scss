@@ -126,28 +126,29 @@ nav {
 }
 
 #storesec {
-  margin-left: auto;
-  margin-right: auto;
   @extend .background;
-  @extend .heightplaceholder;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: space-between;
   height: 300px;
 }
 
-#storeblock {
-  margin-left: auto;
-  margin-right: auto;
+.storeblockleft {
+  margin: 40px auto 0 auto;
   height: 300px;
   width: 400px;
   float: left;
   background-color: $greencolor;
 }
 
-#storecontent {
-  padding: 20px 35px  20px 35px;
+.storeblockright {
+  margin: 40px auto;
+  height: 300px;
+  width: 400px;
+  float: right;
+  background-color: $greencolor;
+}
+
+
+.storecontent {
+  padding: 20px 35px 20px 35px;
 
 }
 
@@ -158,12 +159,28 @@ footer {
   background: $tancolor;
 }
 
-.footsec {
-  width: 300px; 
+.footsecleft {
+  display:inline-block;    
+  width: 350px;
   height: 250px; 
   float: left;
   background: $tancolor;
 } 
+
+.footsecmid {
+  display:inline-block;    
+  width: 350px;
+  height: 250px; 
+  background: $tancolor;
+} 
+
+.footsecright {
+  display:inline-block;    
+  width: 350px;
+  height: 250px; 
+  float: left;
+  background: $tancolor;
+}
 
 .footcontent {
   text-align: center;
