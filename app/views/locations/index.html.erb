@@ -7,7 +7,7 @@
     <%= link_to 'Add a New Store', new_location_path %>
   <% end %>
 </p>
-<img src="http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=markerStyles|<% @locations.each do |l| %><%= l.latitude%>%2C<%= l.longitude %>| <% end %>">
+<img src="http://maps.google.com/maps/api/staticmap?size=340x240&sensor=false&markers=markerStyles|<% @locations.each do |l| %><%= l.latitude%>%2C<%= l.longitude %>| <% end %>">
 <!-- TODO create a class method in the location class to return the info for the loop above -->
 
 <%= form_tag locations_path, :method => :get do %>
