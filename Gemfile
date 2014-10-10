@@ -8,6 +8,7 @@ gem 'rails', '3.2.19'
 gem 'pg'
 gem 'pry-rails'
 gem 'rspec-rails'
+gem 'fog'
 gem 'rmagick', require: false
 gem 'carrierwave'
 gem 'dotenv-rails', :groups => [:development, :test]
