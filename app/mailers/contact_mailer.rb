@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: "feyacandle@gmail.com"
+  default from: '"Feya Candles" <feyacandle@gmail.com>'
   
   def wholesale_inquiry(contact)
     @contact = contact
