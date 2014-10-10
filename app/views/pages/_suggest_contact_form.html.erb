@@ -24,9 +24,8 @@
     <%= f.text_field :phone %>
   </div>
   <div class="field">
-    <p>Please include store name and contact information</p>
-    <%= f.label :message %><br />
-    <%= f.text_area :message, size: '80x5 ' %>
+    <%= f.label :details %><br />
+    <%= f.text_area :message, :value => "Store name, contact info, etc." %></p>
   </div>
   <%= f.hidden_field :category, :value => 'suggest'%>
   <div class="actions">
