@@ -25,7 +25,7 @@ class PasswordResetsController < ApplicationController
     end
   end
 
-  #This action fires when the user has send the 'reset password' form.
+  #This action fires when the user has sent the 'reset password' form.
   def update
     @token = params[:id]
     @user = User.load_from_reset_password_token(params[:id])
