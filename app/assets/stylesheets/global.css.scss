@@ -23,6 +23,7 @@ a:visited {
 body {
   font-family: $font1;
   color: $textcolor;
+  width: 100%;
 }
 
 .background-white {
@@ -37,8 +38,9 @@ body {
 .cf {
   clear: both;
 }
+
 #containmargin {
-  width: 90%;
+  width: 100%;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -75,7 +77,7 @@ nav a:link {
 nav a:visited {
   color: $whitecolor;
 }
-
+  
 #givesec {
   @extend .cf;
   @extend .background-white;
