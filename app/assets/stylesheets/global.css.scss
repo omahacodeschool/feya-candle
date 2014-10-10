@@ -1,8 +1,8 @@
-$textcolor: #524656;
-$whitecolor: #ffffff; //background color
+$textcolor: #524656; //text color
+$whitecolor: #ffffff; //background color and navbar link color
 $greencolor: #A7c5bd;  //navbar color
 $tancolor: #E5DDCB; //footer color
-$linkcolor: #222222;
+$linkcolor: #222222; //link color (except for navbar)
 
 $purplecolor: #524656; //unused color from palette
 $redcolor: #Cf4647; //unused color from palette
@@ -37,11 +37,6 @@ body {
 .cf {
   clear: both;
 }
-
-.heightplaceholder { 
-  height:100px;
-}
-
 #containmargin {
   width: 90%;
   margin-left: 5%;
@@ -62,37 +57,22 @@ header p {
   padding-bottom:20px;
 }
 
-#socialbuttons {
-  float:right;
-}
-
-#socialbuttons li {
-  display: inline;
-  padding: 5px;
-}
-
 nav {
   width: 100%;
   background-color: $greencolor;
-  height: 70px;
   text-align: center;
 }
 
 .navtab {
-  width: 25%;
-  float: left;
+  width: 100%;
   background-color:$greencolor;
 }
 
-.navlink {
-  padding:10px;
-}
-
-.navlink a:link {
+nav a:link {
   color: $whitecolor;
 }
 
-.navlink a:visited {
+nav a:visited {
   color: $whitecolor;
 }
 
@@ -138,7 +118,6 @@ nav {
   padding: 20px 35px 20px 35px;
 }
 
-
 footer {
   width: 100%;
   background: $tancolor;
@@ -146,11 +125,6 @@ footer {
   margin-top: 20px;
   padding-bottom: 20px;
 }
-
-.footsec {   
-  width: 100%;
-} 
-
 
 .footcontent {
   padding-top: 10px;
