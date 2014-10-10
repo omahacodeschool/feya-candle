@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
     @contact = Contact.new
     
     if params[:search].present?
-      @locations = Location.search_by_input(params[:search], params[:radius])
+      @locations = Location.search_by_radius(params[:search], params[:radius])
     else
       @locations = Location.all
     end

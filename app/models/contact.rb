@@ -7,6 +7,8 @@ class Contact < ActiveRecord::Base
   validates :message, presence: true
   validates :category, presence: true
 
+
+  # Determines which set of mailers to send by evaluating the Contact's category
   def send_inquiry_mailers
     @contact = self
     
