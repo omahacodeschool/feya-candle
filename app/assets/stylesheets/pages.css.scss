@@ -2,9 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.margin-std {
+   margin: 20px auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+
 #volunteerpic img{
   width: 100%;
-  margin: 20px auto;
+  @extend .margin-std;
 }
 
 #locationtab table {
