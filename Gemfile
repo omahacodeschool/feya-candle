@@ -33,6 +33,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'sorcery'
 
 gem 'geocoder'
+gem 'mapbox-rails'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
