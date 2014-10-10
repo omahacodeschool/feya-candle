@@ -1,4 +1,13 @@
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+
+<!-- <div class="map">
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+</div>
+
+<div id='map' class='dark'></div>
+<script type='text/javascript'>
+  var map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([37.9, -77], 5);
+</script> -->
 
 <p>
   <b>Name:</b>
