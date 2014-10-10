@@ -69,6 +69,11 @@ nav {
 .navtab {
   width: 100%;
   background-color:$greencolor;
+  padding: 5px 0;
+}
+
+.navtab:hover{
+  background-color: #509994;
 }
 
 nav a:link {
