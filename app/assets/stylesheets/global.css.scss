@@ -31,8 +31,16 @@ body {
   width: 100%;
 }
 
+.margin-std {
+  margin: 20px auto;
+}
+
 .cf {
   clear: both;
+}
+
+.form-text {
+  font-size: 100%;
 }
 
 .heightplaceholder { 
@@ -96,36 +104,36 @@ nav {
 #givesec {
   @extend .cf;
   @extend .background-white;
-  margin: 20px auto;
+  @extend .margin-std;
 }
 
 .givepic img{
+  @extend .margin-std;
   width: 100%;
   height-max: 200px;
-  margin: 20x auto;
 }
 
 #missionsec {
-  margin: 20px auto;
+  @extend .margin-std;
   @extend .background-white;
   text-align: center;
   background-color: $tancolor;
 }
 
 .missionsubtext {
-  padding:20px;
+  padding: 20px;
   font-style: italic;
 }
 
 #storeblockleft {
-  margin: 20px auto;
-//  height: 300px;
+  @extend .margin-std;
+ //  height: 300px;
   width: 100%;
   background-color: $greencolor;
 }
 
 #storeblockright {
-  margin: 20px auto;
+  @extend .margin-std;
 //  height: 300px;
   width: 100%;
   background-color: $greencolor;
