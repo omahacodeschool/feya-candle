@@ -8,10 +8,8 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-  
-<!--TODO indentation issue
-   -->
   <header>
      <%= link_to image_tag('FEYAPNG.png'), root_path %>
      <p>
@@ -24,26 +22,19 @@
        <% end %>
      </p>  
   </header>
+  
   <nav>  
     <div class="navtab">
-      <div class="navlink">
-        <%= link_to 'How We Give', about_path %>
-      </div>
+      <%= link_to 'How We Give', about_path %>
     </div>
     <div class="navtab">
-      <div class="navlink">
-        <%= link_to 'Find Feya Candles', locations_path %>
-      </div>
+      <%= link_to 'Find Feya Candles', locations_path %>
     </div>
     <div class="navtab">
-      <div class="navlink">
-        <%= link_to 'Volunteer With Us', volunteer_path %>
-      </div>
+      <%= link_to 'Volunteer With Us', volunteer_path %>
     </div>
     <div class="navtab">
-      <div class="navlink">
-        <%= link_to 'Wholesale', products_path %>
-      </div>
+      <%= link_to 'Wholesale', products_path %>
     </div>
   </nav>
   
@@ -53,47 +44,39 @@
   </div>
   
   <div id="containmargin">
-
     <%= yield %>
-  
   </div>
   
   <footer>
-    <div class="footsecleft">
-      <div class="footcontent">
-        <h2>Learn More</h2>
-        <p>Feya Candles<br />
-          Street Address<br />
-          Lincoln, NE 685xx<br />
-          402.540.4162<br />
+    <div class="footcontent">
+      <h2>Learn More</h2>
+      <p>Feya Candles<br />
+         Street Address<br />
+         Lincoln, NE 685xx<br />
+         402.540.4162<br />
           <a href="mailto:hallowcandle@windstream.net" target="_top">Email Us</a>
-        </p>
-      </div>
+      </p>
     </div>
-    <div class="footsecmid">
-      <div class="footcontent">
-        <h2>Follow Us</h2>
-        <p>
-          <a href="https://twitter.com/FeyaCandles" target="_blank">Twitter</a>
-        </p>
-        <p>
-          <a href="https://www.facebook.com/hallowcandlecolincoln"
+    <div class="footcontent">
+      <h2>Follow Us</h2>
+      <p>
+        <a href="https://twitter.com/FeyaCandles" target="_blank">Twitter</a>
+      </p>
+      <p>
+        <a href="https://www.facebook.com/hallowcandlecolincoln"
              target="_blank">Facebook</a>
-        </p>
-        <p>
-          <a href="http://www.pinterest.com/FeyaCandles/"
+      </p>
+      <p>
+        <a href="http://www.pinterest.com/FeyaCandles/"
              target="_blank">Pinterest</a>
-        </p>
-        <p>
-          <a href="http://instagram.com/feyacandles" target="_blank">Instagram</a>
-        </p>
-      </div>
+      </p>
+      <p>
+        <a href="http://instagram.com/feyacandles" target="_blank">Instagram</a>
+      </p>
     </div>
-    <div class="footsecright">
-      <div class="footcontent">
-        <h2>Newsletter</h2>
-          <%= render '/pages/newsletter_form' %>
-      </div>
+    <div class="footcontent">
+      <h2>Newsletter</h2>
+      <%= render '/pages/newsletter_form' %>
     </div>
   </footer>
 
