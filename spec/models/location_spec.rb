@@ -17,7 +17,7 @@ RSpec.describe Location, :type => :model do
     expect(@location.listing_address).to eql("Omaha, NE 68102")
   end
   
-  it 'returns the search based on input location with no radius' do
+  it 'returns the search based on zip with no radius' do
     @location = Location.new({:zip => 68102})
     expect(Location.search_by_radius("68102", nil)).to include(@location)
   end
