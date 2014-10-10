@@ -57,6 +57,7 @@ header img {
 
 header p {
   padding-bottom:20px;
+  font-size: 2em;
 }
 
 nav {
@@ -72,12 +73,14 @@ nav {
 
 nav a:link {
   color: $whitecolor;
+  font-size: 2em;
+  text-decoration: none;
 }
 
 nav a:visited {
   color: $whitecolor;
 }
-  
+
 #givesec {
   @extend .cf;
   @extend .background-white;
