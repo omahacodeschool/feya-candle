@@ -1,25 +1,19 @@
 <h1>Wholesale Information</h1>
 
-<p>If you are a business owner and are interested in carrying Feya Candles in your store, please complete the form below, and we will be in touch!</p>
+<p>If you are a business owner and are interested in carrying Feya Candles in your store, please complete the form below, and we will be in touch.</p>
 
-<!-- TODO: add product index image -->
+<div class="givepic">
+  <%= image_tag('three_candles.jpg') %>
+</div>
 
-<% @products.each do |product| %>
-  <table>
-    <tr>
-      <td><%= link_to(product.name, product_path(product.id)) %></td>
-        <% if current_user %>
-          <td><%= link_to 'Show', product_path(product.id) %></td>
-          <td><%= link_to 'Edit', edit_product_path(product.id) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-     </tr>
-  <% end %>
-</table>
+<p>| <% @products.each do |product| %>
+    <%= link_to(product.name, product_path(product.id)) %> |
+   <% end %>
+</p>
 
-<br />
 <% if current_user %>
-  <%= link_to 'New Product', new_product_path %>
+  <p>Click the product links above to view, edit or delete</p>
+  <p><%= link_to 'Add a new Product', new_product_path %></p>
 <% end %>
 
 <%= render "/pages/wholesale_contact_form" %>
