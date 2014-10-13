@@ -9,13 +9,14 @@ $(document).ready(function (){
     url: '/locations/' + id + '.json',
     type: "GET",
     success: function(data) {
+      console.log(data);
       var type = data[0].type;
       var coordinates = data[0].coordinates;
       console.log(type);
       console.log(coordinates);
-      alert(data);
-      // alert(geojson);
-      return map.featureLayer.setGeoJSON(geojson);
+      // var geojson;
+      // geojson = $.parseJSON(data);
+      // return map.featureLayer.setGeoJSON(geojson);
     } 
   });
 
