@@ -5,7 +5,7 @@ $(document).ready(function (){
   var id = $('#location_path').attr('data-path');
 
   $.ajax({
-    dataType: 'text',
+    dataType: 'json',
     url: '/locations/' + id + '.json',
     type: "GET",
     success: function(data) {
@@ -14,9 +14,9 @@ $(document).ready(function (){
       var coordinates = data[0].coordinates;
       console.log(type);
       console.log(coordinates);
-      // var geojson;
-      // geojson = $.parseJSON(data);
-      // return map.featureLayer.setGeoJSON(geojson);
+      var geojson;
+      geojson = $.parseJSON(data);
+      return map.featureLayer.setGeoJSON(geojson);
     } 
   });
 
