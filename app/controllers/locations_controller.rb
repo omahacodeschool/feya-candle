@@ -22,10 +22,27 @@ class LocationsController < ApplicationController
   # GET /locations/1.json
   def show
     @location = Location.find(params[:id])
+    @geojson = Array.new
+    
+    @geojson << {
+      type: 'Feature',
+      coordinates: [@location.longitude, @location.latitude],
+      geometry: {
+        type: 'Point',
+        coordinates: [@location.longitude, @location.latitude]
+      },
+      properties: {
+        name: @location.name,
+        address: @location.address,
+        :'marker-color' => '#00607d',
+        :'marker-symbol' => 'circle',
+        :'marker-size' => 'medium'
+      }
+    }
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @location }
+      format.json { render json: @geojson }
     end
   end
 

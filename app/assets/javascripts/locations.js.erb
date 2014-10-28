@@ -1,3 +1,23 @@
 $(document).ready(function (){
 
+  var access_key = L.mapbox.accessToken = 'pk.eyJ1IjoibXBqZW5vIiwiYSI6IlVIOV9jSDgifQ.f-L24oNGb3OgjWbX8Umw4Q'; 
+  var map = L.mapbox.map('map', 'mpjeno.jofefeep').setView([40.103, -91.571], 6);
+  var id = $('#location_path').attr('data-path');
+
+  $.ajax({
+    dataType: 'json',
+    url: '/locations/' + id + '.json',
+    type: "GET",
+    success: function(data) {
+      console.log(data);
+      var type = data[0].type;
+      var coordinates = data[0].coordinates;
+      console.log(type);
+      console.log(coordinates);
+      var geojson;
+      geojson = $.parseJSON(data);
+      return map.featureLayer.setGeoJSON(geojson);
+    } 
+  });
+
 })
